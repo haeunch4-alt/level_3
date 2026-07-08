@@ -37,3 +37,15 @@
     * `video.src = './dog.mp4';`, `video.autoplay=0;`
     * 객체를 실행한다
     * `객체.함구() = '값';` (X)
+## DOM(document object model)
+### JS에서 제어하고 싶은 HTML 요소가 있을 경우 순서
+1. 제어하고 싶은 HTML 수와 클래스, id 등 확인
+2. 용도에 맞게 변수명 생성 `const 변수명`
+3. 2번 변수에 대입연산자로 객체 대입하기
+    * `document.querySelector('HTML 대상');`
+    * `const 변수명=document.querySelector('대상');`
+4. 안전한 작업을 위해 콘솔로 변수 체크하기
+    * `console.log(검사하고싶은변수명);`
+    * 콘솔결과 화면에서 `null`또는 오류가 없는지 확인
+    * `null`이 뜬다면 HTML script 작성위치로 가서 defer 속성추가
+        * `<script src="경로" defer></script>`

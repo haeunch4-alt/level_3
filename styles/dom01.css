@@ -1,0 +1,74 @@
+/* 26.07.08  todo-list*/
+body {background-color:#f5f5f5;}
+#wrap {
+    width:402px; min-height:874px;
+    background-color: #fff;
+    margin:0 auto;
+    position:relative; /* 포지션의 기준 */
+}
+/* ====================header */
+#wrap header {background-color: aqua;}
+#wrap header .top {
+    background-color: lime;
+    /* flex사용기준 : 정렬하고 싳은 대상을 가진 부모 */
+    /* 정렬대상 : 왼쪽 h1, 오른쪽 div.right, 부모.top */
+    display:flex;/* 기본 메인축 수평(row) */
+    flex-flow:row nowrap;/* 메인축 방향(수평,수직), 줄바꿈(o,x) 설정 */
+    justify-content: space-between; /* 메인축 정렬(양끝배치) */
+    padding:10px 0;
+}
+#wrap header .top .right {
+    display:flex; /* 검색a, 메뉴 a 정렬 위해 부모입력 */
+    flex-flow:row nowrap;/* 메인축 수평, 줄바꿈 안함 */
+    gap:8px; /* 간격 8px */
+}
+#wrap header nav {
+    display:flex;
+    flex-flow:row nowrap;
+    gap:12px;
+    padding:8px 0;
+}
+/* ====================main */
+#wrap main {
+    padding:50px 15px 0;
+}
+#wrap main .todo_list {}
+#wrap main .todo_list li {
+    display: flex; flex-flow:row nowrap;
+    gap:20px; /* 자식 span+em 사이 수평 여백 */
+    border-bottom:1px solid #222;
+    padding:10px 0; /* 내용과 테두리 사이안쪽여백 */
+}
+#wrap main #write_btn {
+    background-color: teal;
+    width:42px; height:42px;
+    position:absolute; right:50px; bottom:50px; /* 포지션 대상 / 포지션위치 */
+}
+#wrap main #write_btn img {width:100%;}
+/* ====================popup */
+#wrap main .write_popup {
+    background-color: #fff;
+    position:absolute;
+    width:311px; height:226px;
+    left:10%; top:35%;
+    z-index:60;
+    padding:20px;
+}
+#wrap main .write_popup .user_write {width:100%;}
+#wrap main .write_popup #write_btn2 {
+    background-color: #222;
+    width:46px; height:46px;
+    position:absolute;
+    bottom:5%; right:5%;
+}
+#wrap main .write_popup #write_btn2 img {width:100%;}
+#wrap main .popup_bg {
+    background-color: rgba(0,0,0,0.25);
+    /* div(block) 기본크기 : w100%, h(max-content) */
+    /* height:874px; */
+    position:absolute;
+    /* absolute 적용 시 w,h 모두 입력 필수 */
+    width:100%; height:100%;
+    left:0; top:0;
+    z-index:50;
+}
