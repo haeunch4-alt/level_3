@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>폼태그 기초와 활용</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/form01.css">
+    <script src="./scripts/form01.js"></script>
+</head>
+<body>
+    <h1>form 태그</h1>
+    <h2>검색</h2>
+    <form action="#" method="get" name="search_frm">
+        <fieldset><!-- 그룹 (폼 안에 그룹이 2개 이상 나뉠경우 선택) -->
+            <legend>그룹제목</legend><!-- 다자인에선 숨김 -->
+            <dl>
+                <dt>검색어</dt>
+                <dd><input type="search" name="user_search" placeholder="추천검색어" autocomplete="on"></dd>
+                <dt>검색버튼</dt>
+                <dd><button type="button" id="search_btn">검색</button></dd>
+            </dl>
+        </fieldset>
+    </form><!-- 검색폼 종료 위치 -->
+    <h2>로그인</h2>
+    <form action="#" method="post" name="login_frm">
+        <dl>
+            <dt>아이디</dt>
+            <dd><input type="text" name="user_id" placeholder="아이디를 입력하세요." autofocus required></dd>
+            <dt>로그인버튼</dt>
+            <dd><button type="button" id="login_btn">로그인</button></dd>
+            <dt>동의정보</dt>
+            <dd><input type="text" readonly value="개인정보 수집에 동의합니다."></dd>
+            <dt>인증번호 입력(휴대폰 인증 후 입력할 수 있습니다)</dt>
+            <dd><input type="text" disabled></dd>
+            <!-- disabled 속성은 자바스크립트에 릐해 조건에 따라 입력가능/불가능을 나눠야 할 경우 사용합니다. -->
+        </dl>
+    </form><!-- e:로그인 -->
+    <h2>회원가입</h2>
+    <form action="#" method="post" name="join_frm">
+        <dl>
+            <dt>연락처</dt>
+            <dd>
+                <input type="tel" maxlength="4" name="tel_first">-
+                <input type="tel" maxlength="4" name="tel_last">
+                <button type="button" id="certification_num">인증번호 받기</button>
+            </dd>
+            <dt>비밀번호</dt>
+            <dd>
+                <input type="password" required minlength="8" name="user_pwd" id="user_pwd">
+                <button type="button" id="pwd_change_btn">비밀번호변경</button>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
