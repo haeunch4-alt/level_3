@@ -1,0 +1,11 @@
+/* 26.07.13 */
+p {margin:10px 0 0 15px;}
+input[type] {background-color: #f5f5f5;}
+input[value] {border:2px solid #222;}
+textarea {resize:none;}
+.group1 {
+    background-color: rgba(255, 255, 0, 0.2);
+    padding:20px;
+    display:flex; flex-flow:column nowrap; gap:12px;
+    align-items:flex-start;
+}
