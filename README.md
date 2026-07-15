@@ -9,11 +9,11 @@
 ## 자바스크립트
 ### 객체, 속성, 이벤트, 함수
 * 객체 : 웹앱에서 사용하는 실제대상 (버튼, 링크, 이미지 등), 보통변수로 데이터(객체)를 저장해서 사용
-* 이벤트 : 웹앱을 이용하는 사용자의 행동 (클릭, 터치 , 드래그 등)
+* 이벤트 : 웹앱을 이용하는 사용자의 행동 (클릭, 터치, 드래그 등)
     * `<button onclick="클릭 시 실행되는 함수">`
 * 함수 : 2번이상 반복되는 실행내용
     * 함수 생성과 호출을 각각 다르게 구분함.
-    * 함수 생성 : `function 함수명(){험수 호출 시 반복실행할내용;}` 생성만으론 절대 결과가 실행되지 않음. 반드시 호출 별도로 진행해야함
+    * 함수 생성 : `function 함수명(){함수 호출 시 반복실행할내용;}` 생성만으론 절대 결과가 실행되지 않음. 반드시 호출 별도로 진행해야함
     * 함수 호출 : 위 함수생성 바깥쪽에 `함수명();`작성, 이벤트와 함께 사용하지고 함 `onclick="함수명;"`
 ### 변수 (데이터(객체)를 저장하는 저장소)
 * 변수 키워드 변수명 대입연산자 대입값
@@ -28,15 +28,29 @@
 * `객체.속성;`
     * 객체의 속성 읽기
     * `a.href;`
-    *   `video.src;`, `video.autoplay;`
+    * `video.src;`, `video.autoplay;`
+    * `span.textContent;` //span 태그 안 내용을 읽는다 
+        * textContent가 들어갈 수 있는 태그는 input 제외
+    * `input.value;` // value는 input전용속성으로 다른태그에 사용불가
 * `객체.속성 = '값';`
     * 객체의 속성 값을 대입한다
     * 대입 시 기존값이 있으면? 기존값 자동제거 되고 새로운 값 대입
+    * `a.href = './reset.css';`
+    * `video.src = './dog.mp4';`
+    * `video.autoplay=0;`
+    * `<span>0</span>` // span의 내용 0을 -> 1로 변경
+        * `span.textContent = 1;` // span을 1로 정의 
+        * `span.textContent = span.textContent+1;` // span에 +1
+    * `<input type="text" value="1">` //input의 내용 1-> 2로 변경
+        * ` input.value = 2;`
+        * `input.value = input.value +2;` // value에서 +2
 * `객체.함수();`
-* `a.href = './reset.css';`
-    * `video.src = './dog.mp4';`, `video.autoplay=0;`
     * 객체를 실행한다
-    * `객체.함구() = '값';` (X)
+    * `객체.함수() = '값';` (X)
+* `이벤트="함수();"`
+    * 이벤트 동작 시 특정 함수를 실행한다.
+    ` <태그 onclick="func1();">` //함수호출
+    * 위 작성 전 준비사항 : `function func1(){반복실행명령}` //함수생성
 ## DOM(document object model)
 ### JS에서 제어하고 싶은 HTML 요소가 있을 경우 순서
 1. 제어하고 싶은 HTML 수와 클래스, id 등 확인

@@ -1,0 +1,52 @@
+:root {
+    --color-primary:#da1249;
+    --color-basic:#fff;
+    --color-disable:#eee;
+    --color-shadow:rgba(0,0,0,0.25);
+    --color-font:#222;
+
+    --radius-circle:25px;
+
+    --spacing-sm:16px;
+    --spacing-md:32px;
+
+    --width-guest-open-box
+    :425px;
+    --width-guest-box:237px;
+}
+/* 에어비앤비 게스트 추가 디자인 */
+#airbnb_frm {}
+#airbnb_frm .total_guest {
+    width:var(--width-guest-box);
+    box-shadow: 0 0 10px var(--color-shadow);
+    border-radius: var(--radius-circle);
+    padding:var(--spacing-sm);
+
+}
+#airbnb_frm .total_guest h2 {}
+#airbnb_frm .total_guest p {}
+#airbnb_frm .total_guest p span {}
+#airbnb_frm .total_guest p em {}
+#airbnb_frm .form_guest {
+    width:var(--width-guest-open-box);
+    box-shadow: 0 0 20px var(--color-shadow);
+    background-color: var(--color-basic);
+    border-radius:var(--radius-circle);
+    padding:var(--spacing-md)
+}
+#airbnb_frm .form_guest li {
+    border-bottom:1px solid var(--color-shadow);
+    padding:var(--spacing-sm);
+    position:relative;
+}
+#airbnb_frm .form_guest li h2 {}
+#airbnb_frm .form_guest li p {}
+#airbnb_frm .form_guest li .num_box {
+    position:absolute; right:0; top:45%;
+}
+#airbnb_frm .form_guest li .num_box button {
+    width:24px; height:24px; 
+    background-color: var(--color-disable);
+    border-radius: 50%;
+}
+#airbnb_frm .form_guest li .num_box span {}
