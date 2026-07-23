@@ -1,0 +1,62 @@
+/* animation.css  */
+/* 공통 디자인 */
+div[class^=step]{
+    display:flex; flex-flow:column nowrap; gap:16px;
+    padding:50px 20px;
+}
+button {background-color: #eee; padding:20px 5px;}
+/* 개별 디자인 */
+.step1 #btn1 {/* 태그에 대한 기본상태 디자인 */
+    background-color: #ff0;  
+    color:#f00;
+    font-weight:400;
+    border-radius:5px;
+    /* 상태에 따라 스타일이 변경될때 애니메이션을 주고 싶으면 트랜지션 적용 */
+    transition:
+        background 0.35s, 
+        border-radius 2s,
+        font-weight 1.5s,
+        color 2s;
+    /* (위)backgrond속성이 상태에 의해 변경될때 0.35초동안 속성에 애니메이션을 적용한다 */
+}
+.step1 #btn1:hover{/* 태그에 마우스를 올렸을 때 상태 디자인 */
+    background-color:#0ff;
+    border-radius:60px;
+    font-weight: 900;
+    color:pink;
+}
+/* --------------------쇼핑ㅁㄹ 상품 형식 애니메이션 연습 */
+.step1 .item{
+    width:360px; 
+    background-color: #f5f5f5; padding:7px;
+}
+.step1 .item .photo{overflow:hidden; height:450px;}
+.step1 .item img{
+    width:100%; 
+    transition:width 1s;
+}
+.step1 .item h1{}
+.step1 .item p{}
+.step1 .item:hover img{/* 아이템에 올렸을떄 img가 변경 */
+    width:110%;
+}
+/* -----------------------할인상품 */
+.step1 .sale {
+    width:280px;
+    background-color: #f5f5f5;
+    padding:10px;
+}
+.step1 .sale .photo {overflow: hidden; height:340px}
+.step1 .sale .photo img {
+    width:100%;
+    transition:width 1s;
+}
+.step1 .sale .color_chip {display:flex; margin:10px 0;}
+.step1 .sale .color_chip span {width:12px; height:12px}
+.step1 .sale .color_chip .color1 {background-color: #000;}
+.step1 .sale .color_chip .color2 {background-color: #0cf;}
+.step1 .sale h1 {font-size: 1.4em; margin:10px 0;}
+.step1 .sale .price {}
+.step1 .sale .photo:hover img {
+    width:105%;
+}
